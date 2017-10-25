@@ -4,7 +4,7 @@ import com.github.salomonbrys.kodein.bind
 import com.github.salomonbrys.kodein.conf.ConfigurableKodein
 import com.github.salomonbrys.kodein.instance
 import com.github.salomonbrys.kodein.provider
-import org.junit.Assert
+import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class Basics {
@@ -20,7 +20,7 @@ class Basics {
         }
 
         val injectedString: String = kodein.instance()
-        Assert.assertEquals("one", injectedString)
+        assertEquals("one", injectedString)
     }
 
     /**
@@ -35,7 +35,7 @@ class Basics {
         }
 
         val injectedString: String = kodein.instance("tag")
-        Assert.assertEquals("two", injectedString)
+        assertEquals("two", injectedString)
     }
 
     /**
@@ -50,7 +50,7 @@ class Basics {
         }
 
         val injectedString: String = kodein.instance("incorrectTag")
-        Assert.assertEquals("", injectedString)
+        assertEquals("", injectedString)
     }
 
 }
